@@ -1,11 +1,11 @@
-       const fuyard = document.getElementById("circle");
+       const circle = document.getElementById("circle");
         const distanceMax = 200;
 
         function getRandomInt(max) {
             return Math.floor(Math.random() * max);
           }
         document.addEventListener("mousemove", (event) => {
-            const rect = fuyard.getBoundingClientRect();
+            const rect = circle.getBoundingClientRect();
             const mouseX = event.clientX;
             const mouseY = event.clientY;
 
@@ -25,7 +25,7 @@
                     newY = getRandomInt(window.innerHeight- rect.height )
                 }
                 
-                fuyard.style.left = `${newX}px`;
-                fuyard.style.top = `${newY}px`;
+                circle.style.left = `${newX}px`;
+                circle.style.top = `${newY}px`;
             }
         });
